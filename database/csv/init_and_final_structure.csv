@@ -55,14 +55,13 @@
 54;76;from 1041925.cif;to 1041924.cif;no;T
 55;77;from 935302.cif;to 922086.cif;no;T
 56;78;from UPC-600 1942055.cif;to (1) UPC-600-373K 2060465.cif;no;T
-57;79;(1) initial 924307.cif;(1') to  compound 2 1' 926445.cif;yes;T
-58;79;(2) from 2 924308 - Copy.cif;(2) to compound 2 924308.cif;yes;T
-59;80;from (1) in 5 636900.cif;to (5) cm6b05277_si_004.cif;no;T
-60;80;from (3) in 6  1515548.cif;to (6)cm6b05277_si_005 - Copy.cif;no;T
-61;80;from (4) in 6 1536823.cif;to (6)cm6b05277_si_005.cif;no;T
-62;81;from (1) with DMF 1403842.cif;to compound with hexane 1403844.cif;yes;solvent
-63;81;from (1) with DMF 1403842.cif;to compound with methanol 1403845.cif;yes;solvent
-64;82;from 2D 854460.cif;to 3D 854461.cif;no;solvent
-65;83;from (3) 1483716.cif;to (4) 1483725.cif;no;T
-66;84;from VMOP-+ 1878068.cif;to VMOP-+ 1590348.cif;yes;T
-67;85;from 1a.cif;to 1b.cif;yes;solvent, gas
+57;79;(2) to compound 2 924308.cif;(1') to  compound 2 1' 926445.cif;no;T
+58;80;from (1) in 5 636900.cif;to (5) cm6b05277_si_004.cif;no;T
+59;80;from (3) in 6  1515548.cif;to (6)cm6b05277_si_005 - Copy.cif;no;T
+60;80;from (4) in 6 1536823.cif;to (6)cm6b05277_si_005.cif;no;T
+61;81;from (1) with DMF 1403842.cif;to compound with hexane 1403844.cif;yes;solvent
+62;81;from (1) with DMF 1403842.cif;to compound with methanol 1403845.cif;yes;solvent
+63;82;from 2D 854460.cif;to 3D 854461.cif;no;solvent
+64;83;from (3) 1483716.cif;to (4) 1483725.cif;no;T
+65;84;from VMOP-+ 1878068.cif;to VMOP-+ 1590348.cif;yes;T
+66;85;from 1a.cif;to 1b.cif;yes;solvent, gas

@@ -63,6 +63,9 @@ for index, row in init_and_final.iterrows():
 # Sort by folder num
 main = main.sort_values(by=['Folder num'])
 
+# Delete duplicates
+main = main.drop_duplicates(subset=['CIF name'], keep='first')
+
 # Remove rows to another dataframe if stimuli is 'T, solvent'
 # Create another dataframe
 t_solvent = main[main['Stimuli'] == 'T, solvent']
