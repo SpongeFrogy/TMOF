@@ -1,5 +1,5 @@
 ﻿idx;Folder num;CIF_init;CIF_final;Reversible;Stimuli
-1;1;initial MOF'-5'-C7 2040922.cif;to MOF-5(C7)_desolvated phase 2040923.cif;yes;solvent
+1;1;initial MOF-5-C7 2040922.cif;to MOF-5(C7)_desolvated phase 2040923.cif;yes;solvent
 2;2;initial MOF DMF@DUT-8(Ni) 1989709.cif;to DUT-8(Ni) polymorph B 1989708.cif;yes;solvent
 3;3;from part_2.cif;to part_4.cif;yes;T, solvent
 4;6;initials MOFs 1961201.cif;final MOFs 1961202.cif;yes;solvent
@@ -16,7 +16,7 @@
 15;17;from MOF 2fa 1052168.cif;to 3fa 1052173.cif;no;T
 16;20;initial MOF 1014506.cif;to changed structure 1014507.cif;yes;T
 17;21;from assynthesized DUT-30(Zn) 804770.cif;to DUT-30(Zn) after phase transition 804771.cif;no;solvent
-18;23;from change Space g 250-Ãœ 1970083.cif;to 210 K same SG 1970082.cif;yes;T
+18;23;from change Space g 250-Ü 1970083.cif;to 210 K same SG 1970082.cif;yes;T
 19;24;from SION-2 1503701.cif;to SION-1 1503702.cif;no;T
 20;30;from DMF solvated Fe(bdp) 100 K 1058447.cif;to DMF solvated Fe(bdp) 298 K 1058448.cif;yes;T
 21;30;from Fe(bdp) 25C 1058446.cif;to Fe(bdp) 25C 50 bar 1058450.cif;yes;gas
