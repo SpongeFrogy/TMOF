@@ -144,7 +144,7 @@ class AE(nn.Module):
             scheduler.step()
             # Validation loop
             val_loss = 0.
-            mape_ = 0.
+            # mape_ = 0.
             self.eval()
             with torch.no_grad():
                 for data in val_loader:
@@ -152,14 +152,14 @@ class AE(nn.Module):
                     inputs = inputs.to(device)
                     outputs = self(inputs)
                     loss = criterion(outputs, inputs)
-                    mp = MAPE(outputs, inputs)
+                    # mp = MAPE(device=device)(outputs, inputs)
                     val_loss += loss.item()
-                    mape_ += mp
+                    # mape_ += mp
 
                 val_loss /= len(val_loader)
-                mape_ /= len(val_loader)
+                # mape_ /= len(val_loader)
 
-                mape_list[epoch] = mape_
+                # mape_list[epoch] = mape_
                 test_loss_list[epoch] = val_loss
 
         train_results = {"model": "AE",
@@ -172,7 +172,8 @@ class AE(nn.Module):
                          "test_loss": test_loss_list[-1],
                          "train_loss_list": train_loss_list,
                          "test_loss_list": test_loss_list,
-                         "mape_list": mape_list}
+                        #  "mape_list": mape_list
+                         }
 
         print(f'Epoch {epochs}, Train Loss: {train_loss_list[-1]}')
         print(f'Epoch {epochs}, Validation Loss: {test_loss_list[-1]}')
@@ -200,16 +201,10 @@ def load_data() -> Tuple[TensorDataset, TensorDataset]:
     Returns:
         Tuple[DataLoader, DataLoader]: train and test TensorDatasets 
     """
-    path = __file__.__str__().split('\\')
+    
 
-    for i in range(len(path)-1, -1, -1):
-        if path[i] == "TMOF":
-            break
-        else:
-            path.pop(i)
-
-    path_train = "/".join(path) + f"/qmof_datasets/train.csv"
-    path_test = "/".join(path) + f"/qmof_datasets/test.csv"
+    path_train = "preprocessing/datasets/qmof_train.csv"
+    path_test = "preprocessing/datasets/qmof_train.csv"
     train = TensorDataset(torch.tensor(pd.read_csv(
         path_train, index_col=0).values, dtype=torch.float32))
     test = TensorDataset(torch.tensor(pd.read_csv(

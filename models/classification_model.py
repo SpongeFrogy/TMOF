@@ -57,7 +57,7 @@ class ClassifierModel:
                                 "n_estimators": hp.choice('n_estimators', list(range(40, 60+1))),
                                 "learning_rate": hp.loguniform("learning_rate", np.log(1e-5), np.log(1e-3)),
                                 },
-                   "Knn": {"n_neighbors": hp.choice("n_neighbors", [3, 4, 5, 6, 7])}}
+                   "Knn": {"n_neighbors": hp.choice("n_neighbors", [3, 4, 5])}}
 
     @staticmethod
     def score(y_true, y_pred) -> float:
