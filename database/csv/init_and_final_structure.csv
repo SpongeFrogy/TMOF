@@ -45,7 +45,7 @@
 44;67;from (Co-MOF) 1912199.cif;to (Co-MOF) 1912233.cif;yes;solvent
 45;69;from CAU13_0GPa.cif;to CAU13_-1GPa.cif;yes;pressure
 46;69;from NOTT300_0GPa.cif;to NOTT300_1GPa_shear.cif;yes;pressure
-47;71;from ja054913a_si_001.cif;to ja054913a_si_002.cif;yes;T
+47;71;from ja054913a_si_001.cif;from ja054913a_si_002.cif;yes;T
 48;71;from ja054913a_si_002.cif;to ja054913a_si_004.cif;yes;humidity
 49;72;from ja500530y_si_003.cif;to ja500530y_si_003.cif;no;T
 50;73;from ja101541s_si_004.cif;to ja101541s_si_003.cif;yes;solvent
@@ -57,7 +57,7 @@
 56;78;from UPC-600 1942055.cif;to (1) UPC-600-373K 2060465.cif;no;T
 57;79;(2) to compound 2 924308.cif;(1') to  compound 2 1' 926445.cif;no;T
 58;80;from (1) in 5 636900.cif;to (5) cm6b05277_si_004.cif;no;T
-59;80;from (3) in 6  1515548.cif;to (6)cm6b05277_si_005 - Copy.cif;no;T
+59;80;from (3) in 6  1515548.cif;to (6)cm6b05277_si_005.cif;no;T
 60;80;from (4) in 6 1536823.cif;to (6)cm6b05277_si_005.cif;no;T
 61;81;from (1) with DMF 1403842.cif;to compound with hexane 1403844.cif;yes;solvent
 62;81;from (1) with DMF 1403842.cif;to compound with methanol 1403845.cif;yes;solvent
