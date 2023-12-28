@@ -37,27 +37,29 @@ class AdaBoostClf(AdaBoostClassifier):
 
 
 class ClassifierModel:
-    clf_dict = {"CatBoost": CatBoostClassifier(random_seed=42, silent=True),
+    clf_dict = {
+                "CatBoost": CatBoostClassifier(random_seed=42, silent=True),
                 "RF": RandomForestClassifier(random_state=42),
                 "AdaBoost": AdaBoostClf(random_state=42), 
-                "Knn": KNeighborsClassifier(weights="distance", p=2)
+                "kNN": KNeighborsClassifier(weights="distance", p=2)
                 }
 
-    h_space_clf = {"CatBoost": {"depth": hp.uniformint("depth", 4, 12),
+    h_space_clf = {
+                    "CatBoost": {"depth": hp.uniformint("depth", 2, 4),
                                 "n_estimators": hp.uniformint("n_estimators", 30, 60),
                                 "learning_rate": hp.loguniform("learning_rate", np.log(1e-5), np.log(1e-3)),
                                 "l2_leaf_reg": hp.uniform("l2_leaf_reg", 01e-5, 0.4),
                                 },
 
-                   "RF":       {"max_depth": hp.choice('max_depth', np.arange(10, 20+1, dtype=int)),
-                                "n_estimators":  hp.choice('n_estimators', list(range(40, 100+1))),
+                   "RF":       {"max_depth": hp.choice('max_depth', np.arange(5, 12+1, dtype=int)),
+                                "n_estimators":  hp.choice('n_estimators', list(range(20, 50+1))),
                                 },
 
                    "AdaBoost": {"max_depth": hp.choice('max_depth', list(range(4, 12+1))),
                                 "n_estimators": hp.choice('n_estimators', list(range(40, 60+1))),
                                 "learning_rate": hp.loguniform("learning_rate", np.log(1e-5), np.log(1e-3)),
                                 },
-                   "Knn": {"n_neighbors": hp.choice("n_neighbors", [3, 4, 5])}}
+                   "kNN": {"n_neighbors": hp.choice("n_neighbors", [3, 4, 5])}}
 
     @staticmethod
     def score(y_true, y_pred) -> float:
